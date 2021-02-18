@@ -9,3 +9,19 @@ go get -u github.com/caddyserver/xcaddy/cmd/xcaddy
 
 xcaddy build --output ./caddy --with github.com/skirsten/caddy-certmagic-generic-s3
 ```
+
+## Config
+
+```json
+{
+  "storage": {
+    "module": "generic_s3",
+    "endpoint": "s3.amazonaws.com",
+    "bucket": "my-bucket",
+    "access_key_id": "...",
+    "secret_access_key": "...",
+    "prefix": "caddy",
+    "encryption_key": "32 character key here"
+  }
+}
+```
